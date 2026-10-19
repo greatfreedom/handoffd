@@ -1,0 +1,20 @@
+{
+  "name": "handoffd",
+  "displayName": "handoffd",
+  "version": "0.1.0",
+  "description": "handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）. macOS + Warp only, experimental.",
+  "license": "MIT",
+  "repository": "https://github.com/greatfreedom/handoffd",
+  "keywords": [
+    "handoff",
+    "relay",
+    "session",
+    "daemon",
+    "macos",
+    "warp"
+  ],
+  "author": {
+    "name": "greatfreedom",
+    "url": "https://github.com/greatfreedom"
+  }
+}

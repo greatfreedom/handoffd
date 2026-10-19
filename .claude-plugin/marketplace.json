@@ -1,0 +1,22 @@
+{
+  "name": "handoffd",
+  "owner": {
+    "name": "greatfreedom",
+    "url": "https://github.com/greatfreedom"
+  },
+  "description": "handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）. macOS + Warp only, experimental.",
+  "plugins": [
+    {
+      "name": "handoffd",
+      "source": ".",
+      "description": "handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）. macOS + Warp only, experimental.",
+      "category": "productivity",
+      "tags": [
+        "handoff",
+        "relay",
+        "session",
+        "daemon"
+      ]
+    }
+  ]
+}

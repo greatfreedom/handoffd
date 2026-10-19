@@ -1,0 +1,8 @@
+prep/
+__pycache__/
+*.pyc
+*.bak-*
+.tts-venv/
+assets/voice/.staging
+assets/voice/.previous
+.DS_Store

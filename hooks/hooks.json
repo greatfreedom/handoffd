@@ -1,0 +1,130 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "SessionStart"]
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "UserPromptSubmit"]
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "Stop"]
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "StopFailure"]
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "SessionEnd"],
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "Notification"]
+          }
+        ]
+      }
+    ],
+    "Elicitation": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "Elicitation"]
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "PreToolUse"]
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "PostToolUse"]
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "PostToolUseFailure"]
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/sh",
+            "args": ["-c", "[ -r \"$1\" ] || exit 0; exec /usr/bin/python3 \"$1\" \"$2\"", "handoffd-hook", "${CLAUDE_PLUGIN_ROOT}/cdm/hook_relay.py", "PermissionRequest"]
+          }
+        ],
+        "matcher": "*"
+      }
+    ]
+  }
+}

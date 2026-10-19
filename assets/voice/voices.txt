@@ -1,0 +1,4 @@
+# 音色  语速  音调（edge-tts 参数；一行一个音色）
+# zh-TW-HsiaoChenNeural -5% +8Hz   （Owner 2026-10-01 选定只用云夏；保留备查）
+zh-CN-YunxiaNeural -5% +5Hz
+# zh-CN-YunjianNeural +0% +0Hz   （Owner 2026-10-01 选定只用云夏；保留备查）
