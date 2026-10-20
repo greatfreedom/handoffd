@@ -9,7 +9,7 @@ When the main Claude Code session (“A”) is running out of context or has rea
 
 - Triggers: goal reached → hand over; context ≥ 65% → reminds A to find a good point and blocks *new long tasks*; ≥ 76% → the hook initiates the handover and only wrap-up is allowed.
 - Pure Python 3 standard library (macOS system `/usr/bin/python3`, 3.9 is fine). No dependencies to install.
-- Needs: macOS, [Warp](https://www.warp.dev/) terminal, `git`, Claude Code ≥ 2.1.284 (see `min_claude_version` in `cdm/config.py`; the basis for this number is not documented).
+- Needs: macOS, [Warp](https://www.warp.dev/) terminal, `git`, Claude Code ≥ 2.1.284 (the version it was built and tested on; see `min_claude_version` in `cdm/config.py`).
 
 ## Install
 
@@ -18,7 +18,14 @@ When the main Claude Code session (“A”) is running out of context or has rea
 /plugin install handoffd@handoffd
 ```
 
-A plugin cannot set `statusLine` or `permissions.allow`, and its `bin/` is only on the PATH of Claude's Bash tool, so also: (1) put a `handoffd` wrapper script on your terminal PATH, (2) add `Bash(handoffd:*)`, `SendMessage`, `ListAgents`, `Read(//private/tmp/claude-<uid>/**)` to the project's `permissions.allow`, (3) point `statusLine` at `bin/statusline_tap.sh` (required: without it the 65%/76% triggers never fire; keep your existing status line by wrapping it, see INSTALL.md), (4) check with `handoffd status`, then run `!handoffd on` yourself. **Full steps with backup/undo for every settings edit, the update procedure (paths change on plugin update) and uninstall: [docs/INSTALL.md](docs/INSTALL.md).**
+A plugin cannot set `statusLine` or `permissions.allow`, and its `bin/` is only on the PATH of Claude's Bash tool, so after installing also:
+
+1. Put a `handoffd` wrapper script on your terminal PATH.
+2. Add `Bash(handoffd:*)`, `SendMessage`, `ListAgents`, `Read(//private/tmp/claude-<uid>/**)` to the project's `permissions.allow`.
+3. Point `statusLine` at `bin/statusline_tap.sh` — **required**: without it the 65%/76% triggers never fire (keep your existing status line by wrapping it, see INSTALL.md).
+4. Check with `handoffd status`, then run `!handoffd on` yourself.
+
+**Full steps with backup/undo for every settings edit, the update procedure (paths change on plugin update) and uninstall: [docs/INSTALL.md](docs/INSTALL.md).**
 
 **Known limitation (0.1.0, “plan B”):** the plugin directory name contains the version, so after a plugin update the wrapper script, the `statusLine` command and the launchd job still point at the old directory. 0.1.0 handles this with a documented manual procedure (`handoffd off` → fix the paths → `/reload-plugins` → `handoffd on`, see “Update the plugin” in docs/INSTALL.md); there is no automatic detection or stable-path mechanism yet.
 
