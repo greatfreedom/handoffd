@@ -1,4 +1,4 @@
-# handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）
+# handoffd — Automatically hand off to a fresh Claude Code session before context runs out（上下文快满时，自动交接给新的 Claude Code 会话）
 
 > **macOS + Warp only · experimental (v0.1.0).** Not affiliated with the unrelated GitHub repositories `kdykdy7991/handoffd` and `Kriso1337/handoffd`.
 > Runtime messages (banners, hook notices, CLI output) are in **Chinese** in this first release. 中文说明在下方。

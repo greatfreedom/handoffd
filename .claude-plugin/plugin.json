@@ -2,7 +2,7 @@
   "name": "handoffd",
   "displayName": "handoffd",
   "version": "0.1.0",
-  "description": "handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）. macOS + Warp only, experimental.",
+  "description": "handoffd — Automatically hand off to a fresh Claude Code session before context runs out（上下文快满时，自动交接给新的 Claude Code 会话）. macOS + Warp only, experimental.",
   "license": "MIT",
   "repository": "https://github.com/greatfreedom/handoffd",
   "keywords": [

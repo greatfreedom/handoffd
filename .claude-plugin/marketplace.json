@@ -4,12 +4,12 @@
     "name": "greatfreedom",
     "url": "https://github.com/greatfreedom"
   },
-  "description": "handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）. macOS + Warp only, experimental.",
+  "description": "handoffd — Automatically hand off to a fresh Claude Code session before context runs out（上下文快满时，自动交接给新的 Claude Code 会话）. macOS + Warp only, experimental.",
   "plugins": [
     {
       "name": "handoffd",
       "source": ".",
-      "description": "handoffd — Automatic main-session relay for Claude Code（后台自动交接主会话）. macOS + Warp only, experimental.",
+      "description": "handoffd — Automatically hand off to a fresh Claude Code session before context runs out（上下文快满时，自动交接给新的 Claude Code 会话）. macOS + Warp only, experimental.",
       "category": "productivity",
       "tags": [
         "handoff",
